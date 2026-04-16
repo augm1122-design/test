@@ -1,0 +1,207 @@
+   /* دعم اللغة العربية (RTL - من اليمين لليسار) */
+
+/* تطبيق RTL عند تفعيل اللغة العربية */
+[dir="rtl"] {
+    text-align: right;
+}
+
+/* Header RTL */
+[dir="rtl"] header {
+    direction: rtl;
+}
+
+[dir="rtl"] .nav-links {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-links a {
+    margin-left: 0;
+    margin-right: 2rem;
+}
+
+[dir="rtl"] .nav-links a:last-child {
+    margin-right: 0;
+}
+
+/* Search & Filters RTL */
+[dir="rtl"] .search-filter-container {
+    direction: rtl;
+}
+
+[dir="rtl"] .search-bar {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .search-bar input {
+    text-align: right;
+    padding-right: 1rem;
+    padding-left: 3rem;
+}
+
+[dir="rtl"] .search-bar button {
+    right: auto;
+    left: 0.5rem;
+}
+
+[dir="rtl"] .filter-group {
+    direction: rtl;
+}
+
+[dir="rtl"] .dropdown-content {
+    text-align: right;
+}
+
+[dir="rtl"] .dropdown-content label {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .dropdown-content input[type="radio"],
+[dir="rtl"] .dropdown-content input[type="checkbox"] {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+/* Dorm Cards RTL */
+[dir="rtl"] .dorm-card {
+    text-align: right;
+}
+
+[dir="rtl"] .dorm-card-content {
+    text-align: right;
+}
+
+[dir="rtl"] .favorite-btn {
+    right: auto;
+    left: 10px;
+}
+
+/* Chatbot RTL */
+[dir="rtl"] #chatbotToggle {
+    right: auto;
+    left: 20px;
+}
+
+[dir="rtl"] #chatbotWindow {
+    right: auto;
+    left: 20px;
+}
+
+[dir="rtl"] .chatbot-header {
+    direction: rtl;
+}
+
+[dir="rtl"] #chatbotClose {
+    right: auto;
+    left: 15px;
+}
+
+[dir="rtl"] .chatbot-message {
+    text-align: right;
+}
+
+[dir="rtl"] .chatbot-message.user {
+    align-items: flex-start;
+}
+
+[dir="rtl"] .chatbot-message.bot {
+    align-items: flex-end;
+}
+
+[dir="rtl"] .message-content {
+    text-align: right;
+}
+
+[dir="rtl"] .quick-replies {
+    direction: rtl;
+}
+
+[dir="rtl"] .chatbot-input-area {
+    direction: rtl;
+}
+
+[dir="rtl"] #chatbotInput {
+    text-align: right;
+    padding-right: 1rem;
+    padding-left: 3.5rem;
+}
+
+[dir="rtl"] #chatbotSend {
+    right: auto;
+    left: 5px;
+}
+
+/* Language Toggle Button */
+#languageToggle {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+#languageToggle:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.4);
+}
+
+[dir="rtl"] #languageToggle {
+    right: auto;
+    left: 20px;
+}
+
+/* Font adjustments for Arabic */
+[dir="rtl"] body {
+    font-family: 'Segoe UI', 'Tahoma', 'Arial', sans-serif;
+}
+
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3 {
+    font-weight: 600;
+}
+
+/* Responsive adjustments for RTL */
+@media (max-width: 768px) {
+    [dir="rtl"] .nav-links a {
+        margin-right: 1rem;
+    }
+    
+    [dir="rtl"] #languageToggle {
+        top: 70px;
+        left: 10px;
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    
+    [dir="rtl"] #chatbotToggle {
+        left: 10px;
+    }
+    
+    [dir="rtl"] #chatbotWindow {
+        left: 10px;
+        right: 10px;
+        width: calc(100% - 20px);
+    }
+}
+
+/* Smooth transitions for language switch */
+* {
+    transition: margin 0.3s ease, padding 0.3s ease, text-align 0.3s ease;
+}
+
+/* Override transitions for specific elements */
+.chatbot-message,
+.dorm-card,
+.search-bar input {
+    transition: all 0.3s ease;
+}
+
